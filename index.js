@@ -122,6 +122,7 @@ restService.post("/audio", function(req, res) {
       break;
   }
   return res.json({
+	fulfillmentText: speech,
     speech: speech,
     displayText: speech,
     source: "webhook-echo-sample"
