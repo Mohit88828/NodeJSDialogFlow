@@ -126,6 +126,8 @@ restService.post("/audio", function(req, res) {
 
 restService.post("/video", function(req, res) {
   return res.json({
+	fulfillmentText:
+	  '<speak>  <audio src="https://www.youtube.com/watch?v=VX7SSnvpj-8">did not get your MP3 audio file</audio></speak>',
     speech:
       '<speak>  <audio src="https://www.youtube.com/watch?v=VX7SSnvpj-8">did not get your MP3 audio file</audio></speak>',
     displayText:
