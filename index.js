@@ -36,7 +36,7 @@ restService.post("/audio", function(req, res) {
     req.body.queryResult.parameters &&
     req.body.queryResult.parameters.echoText
       ? req.body.queryResult.parameters.echoText
-      : "Seems like some problem. Speak again.";
+      : req.body.queryResult.parameters.echoText;
   switch (speech.toLowerCase()) {
     //Speech Synthesis Markup Language 
     case "music one":
