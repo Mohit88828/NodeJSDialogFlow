@@ -2,9 +2,8 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const { WebhookClient, Image } = require('dialogflow-fulfillment');
+
 const restService = express();
-const agent = new WebhookClient({ request, response });
 
 restService.use(
   bodyParser.urlencoded({
@@ -15,12 +14,8 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-
- 
-
-
-
 	
+  
   var speech =
     req.body.queryResult &&
     req.body.queryResult.parameters &&
@@ -43,15 +38,12 @@ restService.post("/audio", function(req, res) {
     req.body.queryResult.parameters.echoText
       ? req.body.queryResult.parameters.echoText
       : req.body.queryResult.parameters.echoText;
-	  
-	  agent.add(
- new Image('https://avatars1.githubusercontent.com/u/36980416')
-); 
   switch (speech.toLowerCase()) {
     //Speech Synthesis Markup Language 
     case "music one":
-      speech =agent;
-        
+      speech =
+        //'<speak><audio src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio></speak>';
+		'<img src="https://i2.wp.com/www.quantemol.com/wordpress/wp-content/uploads/2017/09/image-demo-b.png"/>';
       break;
     case "music two":
       speech =
