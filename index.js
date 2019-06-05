@@ -41,7 +41,8 @@ restService.post("/audio", function(req, res) {
     //Speech Synthesis Markup Language 
     case "music one":
       speech =
-        '<speak><audio src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio></speak>';
+        //'<speak><audio src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio></speak>';
+		'<img src="https://i2.wp.com/www.quantemol.com/wordpress/wp-content/uploads/2017/09/image-demo-b.png"/>';
       break;
     case "music two":
       speech =
